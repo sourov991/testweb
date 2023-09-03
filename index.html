@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="3;url=https://google.com">
+    <script>
+        var countdown = 3; // Set the initial countdown value in seconds
+
+        function startCountdown() {
+            var countdownDisplay = document.getElementById("countdown");
+
+            var interval = setInterval(function () {
+                countdown--;
+                countdownDisplay.innerHTML = countdown + " seconds remaining";
+
+                if (countdown <= 0) {
+                    clearInterval(interval); // Stop the countdown when it reaches 0
+                }
+            }, 1000); // Update the countdown every 1 second (1000 milliseconds)
+        }
+        window.onload = startCountdown; // Start the countdown when the page loads
+    </script>
+</head>
+<body>
+    <p id="countdown">3 seconds remaining</p>
+</body>
+</html>
